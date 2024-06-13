@@ -6,7 +6,7 @@ create a virtual env of python first :
 
 ```
 python3 -m venv <your directory>, exp : python3 -m venv /Users/moladin/code/venv_ds
-source <your directory>, exp : source /Users/moladin/code/venv_ds
+source <your directory>, exp : source /Users/moladin/code/venv_ds/bin/activate
 ```
 
 1. build the postgres image
@@ -30,6 +30,7 @@ ex: docker run -d -p 5432:5432 --name dbt_proj_container dbt_proj
 ```
 
 2a. install DBT
+python -m pip install dbt-core dbt-postgres
 
 ```
 

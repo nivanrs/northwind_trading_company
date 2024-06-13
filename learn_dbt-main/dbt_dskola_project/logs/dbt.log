@@ -772,3 +772,806 @@ KeyboardInterrupt
 [0m22:01:46.022421 [debug] [MainThread]: Command `dbt docs serve` failed at 22:01:46.021844 after 1517.03 seconds
 [0m22:01:46.024678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bdf140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d10ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c07fb0>]}
 [0m22:01:46.026214 [debug] [MainThread]: Flushing usage events
+[0m22:08:58.333491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079f1b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a224d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a5b590>]}
+
+
+============================== 22:08:58.337145 | 8763b87c-9768-4003-9b9b-e9cd62ad13db ==============================
+[0m22:08:58.337145 [info ] [MainThread]: Running with dbt=1.8.2
+[0m22:08:58.337520 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': './', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'dbt_dskola_project/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug --profiles-dir ./ --project-dir dbt_dskola_project', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:08:58.346196 [info ] [MainThread]: dbt version: 1.8.2
+[0m22:08:58.346458 [info ] [MainThread]: python version: 3.11.0
+[0m22:08:58.346642 [info ] [MainThread]: python path: /Users/moladin/code/venv_ds/bin/python
+[0m22:08:58.346804 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m22:08:58.387194 [info ] [MainThread]: Using profiles dir at ./
+[0m22:08:58.387527 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m22:08:58.387699 [info ] [MainThread]: Using dbt_project.yml file at dbt_dskola_project/dbt_project.yml
+[0m22:08:58.388159 [info ] [MainThread]: adapter type: postgres
+[0m22:08:58.388370 [info ] [MainThread]: adapter version: 1.8.1
+[0m22:08:58.391124 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:08:58.391334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8763b87c-9768-4003-9b9b-e9cd62ad13db', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107febf90>]}
+[0m22:08:58.391577 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:08:58.391743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8763b87c-9768-4003-9b9b-e9cd62ad13db', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a31c90>]}
+[0m22:08:58.435881 [info ] [MainThread]: Configuration:
+[0m22:08:58.436202 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:08:58.436364 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:08:58.436511 [info ] [MainThread]: Required dependencies:
+[0m22:08:58.436703 [debug] [MainThread]: Executing "git --help"
+[0m22:08:58.450014 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:08:58.451274 [debug] [MainThread]: STDERR: "b''"
+[0m22:08:58.451580 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:08:58.451787 [info ] [MainThread]: Connection:
+[0m22:08:58.452039 [info ] [MainThread]:   host: localhost
+[0m22:08:58.452247 [info ] [MainThread]:   port: 5432
+[0m22:08:58.452539 [info ] [MainThread]:   user: postgres
+[0m22:08:58.452687 [info ] [MainThread]:   database: db_dskola
+[0m22:08:58.452828 [info ] [MainThread]:   schema: public
+[0m22:08:58.452970 [info ] [MainThread]:   connect_timeout: 10
+[0m22:08:58.453165 [info ] [MainThread]:   role: None
+[0m22:08:58.453303 [info ] [MainThread]:   search_path: None
+[0m22:08:58.453439 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:08:58.453575 [info ] [MainThread]:   sslmode: None
+[0m22:08:58.453706 [info ] [MainThread]:   sslcert: None
+[0m22:08:58.453837 [info ] [MainThread]:   sslkey: None
+[0m22:08:58.453967 [info ] [MainThread]:   sslrootcert: None
+[0m22:08:58.454099 [info ] [MainThread]:   application_name: dbt
+[0m22:08:58.454226 [info ] [MainThread]:   retries: 1
+[0m22:08:58.454624 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m22:08:58.460559 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:08:58.491093 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:08:58.491394 [debug] [MainThread]: On debug: select 1 as id
+[0m22:08:58.491562 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:08:58.534146 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:08:58.534875 [debug] [MainThread]: On debug: Close
+[0m22:08:58.535113 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:08:58.535304 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:08:58.538315 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.24046467, "process_user_time": 0.700972, "process_kernel_time": 0.132089, "process_mem_max_rss": "112590848", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:08:58.538809 [debug] [MainThread]: Command `dbt debug` succeeded at 22:08:58.538742 after 0.24 seconds
+[0m22:08:58.539064 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:08:58.539295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028a9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102943e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102948d10>]}
+[0m22:08:58.539548 [debug] [MainThread]: Flushing usage events
+[0m22:09:14.660336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069e1a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069e0210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a4bf90>]}
+
+
+============================== 22:09:14.664117 | 8e6167d2-617a-42a4-985e-9717ff9df2b3 ==============================
+[0m22:09:14.664117 [info ] [MainThread]: Running with dbt=1.8.2
+[0m22:09:14.665114 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'dbt_dskola_project/logs', 'version_check': 'True', 'profiles_dir': './', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir ./ --project-dir dbt_dskola_project', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:09:14.714828 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:09:14.715409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ecf950>]}
+[0m22:09:14.715735 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:09:14.715959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ece190>]}
+[0m22:09:14.808265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065343d0>]}
+[0m22:09:14.850100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d2dbd0>]}
+[0m22:09:14.850986 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m22:09:14.861799 [debug] [MainThread]: checksum: f0a141b9de567cb7f131613ba2682f40b3a1c6a157f81c6e5435862eff68f109, vars: {}, profile: , target: , version: 1.8.2
+[0m22:09:14.919812 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m22:09:14.920194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105645350>]}
+[0m22:09:15.448266 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- seeds.dbt_dskola_project
+- snapshots.dbt_dskola_project
+[0m22:09:15.454160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10762f610>]}
+[0m22:09:15.535790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077268d0>]}
+[0m22:09:15.536165 [info ] [MainThread]: Found 5 models, 4 sources, 413 macros
+[0m22:09:15.536354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077279d0>]}
+[0m22:09:15.537344 [info ] [MainThread]: 
+[0m22:09:15.537702 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:09:15.539827 [debug] [ThreadPool]: Acquiring new postgres connection 'list_db_dskola'
+[0m22:09:15.567602 [debug] [ThreadPool]: Using postgres connection "list_db_dskola"
+[0m22:09:15.567920 [debug] [ThreadPool]: On list_db_dskola: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "list_db_dskola"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m22:09:15.568106 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:15.610254 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m22:09:15.611064 [debug] [ThreadPool]: On list_db_dskola: Close
+[0m22:09:15.611946 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_db_dskola, now list_db_dskola_public)
+[0m22:09:15.615506 [debug] [ThreadPool]: Using postgres connection "list_db_dskola_public"
+[0m22:09:15.615807 [debug] [ThreadPool]: On list_db_dskola_public: BEGIN
+[0m22:09:15.615973 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:09:15.623856 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.624128 [debug] [ThreadPool]: Using postgres connection "list_db_dskola_public"
+[0m22:09:15.624316 [debug] [ThreadPool]: On list_db_dskola_public: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "list_db_dskola_public"} */
+select
+      'db_dskola' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'db_dskola' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'db_dskola' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:09:15.632980 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m22:09:15.633859 [debug] [ThreadPool]: On list_db_dskola_public: ROLLBACK
+[0m22:09:15.634283 [debug] [ThreadPool]: On list_db_dskola_public: Close
+[0m22:09:15.637206 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.637438 [debug] [MainThread]: On master: BEGIN
+[0m22:09:15.637592 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:09:15.643971 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.644276 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.644506 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:09:15.650706 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m22:09:15.651629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f3010>]}
+[0m22:09:15.651913 [debug] [MainThread]: On master: ROLLBACK
+[0m22:09:15.652522 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.652682 [debug] [MainThread]: On master: BEGIN
+[0m22:09:15.653541 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.653698 [debug] [MainThread]: On master: COMMIT
+[0m22:09:15.653843 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.653983 [debug] [MainThread]: On master: COMMIT
+[0m22:09:15.654420 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.654581 [debug] [MainThread]: On master: Close
+[0m22:09:15.654835 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:09:15.655091 [info ] [MainThread]: 
+[0m22:09:15.657241 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_customers
+[0m22:09:15.657524 [info ] [Thread-1 (]: 1 of 5 START sql table model public.raw_customers .............................. [RUN]
+[0m22:09:15.657774 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_db_dskola_public, now model.dbt_dskola_project.raw_customers)
+[0m22:09:15.657949 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_customers
+[0m22:09:15.666493 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.668396 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_customers
+[0m22:09:15.720661 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.721380 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.721600 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: BEGIN
+[0m22:09:15.721815 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:15.728980 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.729338 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.729542 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_customers"} */
+
+  
+    
+
+  create  table "db_dskola"."public"."raw_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    customer_id,
+    customer_name,
+    customer_email,
+    signup_date
+from
+    "db_dskola"."public"."customers"
+  );
+  
+[0m22:09:15.740556 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m22:09:15.744127 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.744352 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_customers"} */
+alter table "db_dskola"."public"."raw_customers__dbt_tmp" rename to "raw_customers"
+[0m22:09:15.745318 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:09:15.754777 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: COMMIT
+[0m22:09:15.755088 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.755275 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: COMMIT
+[0m22:09:15.758976 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.764695 [debug] [Thread-1 (]: Applying DROP to: "db_dskola"."public"."raw_customers__dbt_backup"
+[0m22:09:15.767493 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_customers"
+[0m22:09:15.767750 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_customers"} */
+drop table if exists "db_dskola"."public"."raw_customers__dbt_backup" cascade
+[0m22:09:15.768870 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:09:15.770094 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_customers: Close
+[0m22:09:15.770837 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079fb650>]}
+[0m22:09:15.771241 [info ] [Thread-1 (]: 1 of 5 OK created sql table model public.raw_customers ......................... [[32mSELECT 2[0m in 0.11s]
+[0m22:09:15.771557 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_customers
+[0m22:09:15.771788 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_orders
+[0m22:09:15.772049 [info ] [Thread-1 (]: 2 of 5 START sql table model public.raw_orders ................................. [RUN]
+[0m22:09:15.772277 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_customers, now model.dbt_dskola_project.raw_orders)
+[0m22:09:15.772451 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_orders
+[0m22:09:15.774252 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.774989 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_orders
+[0m22:09:15.777023 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.777874 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.778095 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: BEGIN
+[0m22:09:15.778269 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:15.789859 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.790638 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.790994 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_orders"} */
+
+  
+    
+
+  create  table "db_dskola"."public"."raw_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    order_id,
+    order_date,
+    customer_id,
+    product_id,
+    order_amount
+from
+    "db_dskola"."public"."orders"
+  );
+  
+[0m22:09:15.796664 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m22:09:15.799920 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.800235 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_orders"} */
+alter table "db_dskola"."public"."raw_orders__dbt_tmp" rename to "raw_orders"
+[0m22:09:15.801590 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:09:15.803154 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: COMMIT
+[0m22:09:15.804225 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.805060 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: COMMIT
+[0m22:09:15.807044 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.808502 [debug] [Thread-1 (]: Applying DROP to: "db_dskola"."public"."raw_orders__dbt_backup"
+[0m22:09:15.809049 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_orders"
+[0m22:09:15.809275 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_orders"} */
+drop table if exists "db_dskola"."public"."raw_orders__dbt_backup" cascade
+[0m22:09:15.809904 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:09:15.810632 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_orders: Close
+[0m22:09:15.810922 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107adba50>]}
+[0m22:09:15.811249 [info ] [Thread-1 (]: 2 of 5 OK created sql table model public.raw_orders ............................ [[32mSELECT 2[0m in 0.04s]
+[0m22:09:15.811566 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_orders
+[0m22:09:15.811801 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_payments
+[0m22:09:15.812073 [info ] [Thread-1 (]: 3 of 5 START sql table model public.raw_payments ............................... [RUN]
+[0m22:09:15.812300 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_orders, now model.dbt_dskola_project.raw_payments)
+[0m22:09:15.812489 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_payments
+[0m22:09:15.813949 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.814705 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_payments
+[0m22:09:15.816995 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.817691 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.817889 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: BEGIN
+[0m22:09:15.818056 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:15.826067 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.826406 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.826601 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_payments"} */
+
+  
+    
+
+  create  table "db_dskola"."public"."raw_payments__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    payment_id,
+    order_id,
+    payment_amount,
+    payment_method
+from
+    "db_dskola"."public"."payments"
+  );
+  
+[0m22:09:15.828669 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m22:09:15.831910 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.832194 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_payments"} */
+alter table "db_dskola"."public"."raw_payments__dbt_tmp" rename to "raw_payments"
+[0m22:09:15.832970 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:09:15.833968 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: COMMIT
+[0m22:09:15.834194 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.834369 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: COMMIT
+[0m22:09:15.836373 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.837897 [debug] [Thread-1 (]: Applying DROP to: "db_dskola"."public"."raw_payments__dbt_backup"
+[0m22:09:15.838324 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_payments"
+[0m22:09:15.838511 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_payments"} */
+drop table if exists "db_dskola"."public"."raw_payments__dbt_backup" cascade
+[0m22:09:15.839147 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:09:15.839872 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_payments: Close
+[0m22:09:15.840241 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b046d0>]}
+[0m22:09:15.840637 [info ] [Thread-1 (]: 3 of 5 OK created sql table model public.raw_payments .......................... [[32mSELECT 2[0m in 0.03s]
+[0m22:09:15.840979 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_payments
+[0m22:09:15.841206 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_products
+[0m22:09:15.841440 [info ] [Thread-1 (]: 4 of 5 START sql table model public.raw_products ............................... [RUN]
+[0m22:09:15.841727 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_payments, now model.dbt_dskola_project.raw_products)
+[0m22:09:15.841911 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_products
+[0m22:09:15.843399 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_products"
+[0m22:09:15.843961 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_products
+[0m22:09:15.846031 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dskola_project.raw_products"
+[0m22:09:15.846587 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_products"
+[0m22:09:15.846782 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: BEGIN
+[0m22:09:15.846977 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:15.855418 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.855867 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_products"
+[0m22:09:15.856196 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_products"} */
+
+  
+    
+
+  create  table "db_dskola"."public"."raw_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    product_id,
+    product_name,
+    category
+from
+    "db_dskola"."public"."products"
+  );
+  
+[0m22:09:15.859390 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m22:09:15.861201 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_products"
+[0m22:09:15.861415 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_products"} */
+alter table "db_dskola"."public"."raw_products__dbt_tmp" rename to "raw_products"
+[0m22:09:15.861924 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:09:15.862800 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: COMMIT
+[0m22:09:15.863018 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_products"
+[0m22:09:15.863461 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: COMMIT
+[0m22:09:15.866200 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.867758 [debug] [Thread-1 (]: Applying DROP to: "db_dskola"."public"."raw_products__dbt_backup"
+[0m22:09:15.868184 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.raw_products"
+[0m22:09:15.868366 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.raw_products"} */
+drop table if exists "db_dskola"."public"."raw_products__dbt_backup" cascade
+[0m22:09:15.869194 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:09:15.870063 [debug] [Thread-1 (]: On model.dbt_dskola_project.raw_products: Close
+[0m22:09:15.870431 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107af4e90>]}
+[0m22:09:15.870943 [info ] [Thread-1 (]: 4 of 5 OK created sql table model public.raw_products .......................... [[32mSELECT 2[0m in 0.03s]
+[0m22:09:15.871324 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_products
+[0m22:09:15.871839 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.orders_detail
+[0m22:09:15.872154 [info ] [Thread-1 (]: 5 of 5 START sql table model public.orders_detail .............................. [RUN]
+[0m22:09:15.872439 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_products, now model.dbt_dskola_project.orders_detail)
+[0m22:09:15.872634 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.orders_detail
+[0m22:09:15.874653 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.875357 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.orders_detail
+[0m22:09:15.877420 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.878177 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.878379 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: BEGIN
+[0m22:09:15.878549 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:15.887572 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.887935 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.888192 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.orders_detail"} */
+
+  
+    
+
+  create  table "db_dskola"."public"."orders_detail__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with raw_orders as (
+    select * from "db_dskola"."public"."raw_orders"
+),
+
+raw_customers as (
+    select * from "db_dskola"."public"."raw_customers"
+),
+
+raw_products as (
+    select * from "db_dskola"."public"."raw_products"
+),
+
+raw_payments as (
+    select * from "db_dskola"."public"."raw_payments"
+)
+
+select
+    o.order_id,
+    o.order_date,
+    c.customer_name,
+    c.customer_email,
+    p.product_name,
+    p.category,
+    o.order_amount,
+    py.payment_amount,
+    py.payment_method
+from
+    raw_orders o
+join
+    raw_customers c on o.customer_id = c.customer_id
+join
+    raw_products p on o.product_id = p.product_id
+join
+    raw_payments py on o.order_id = py.order_id
+  );
+  
+[0m22:09:15.894388 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m22:09:15.897813 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.898124 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.orders_detail"} */
+alter table "db_dskola"."public"."orders_detail__dbt_tmp" rename to "orders_detail"
+[0m22:09:15.899503 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:09:15.900621 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: COMMIT
+[0m22:09:15.900873 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.901094 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: COMMIT
+[0m22:09:15.902253 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.903656 [debug] [Thread-1 (]: Applying DROP to: "db_dskola"."public"."orders_detail__dbt_backup"
+[0m22:09:15.904054 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dskola_project.orders_detail"
+[0m22:09:15.904241 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "node_id": "model.dbt_dskola_project.orders_detail"} */
+drop table if exists "db_dskola"."public"."orders_detail__dbt_backup" cascade
+[0m22:09:15.904772 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:09:15.905475 [debug] [Thread-1 (]: On model.dbt_dskola_project.orders_detail: Close
+[0m22:09:15.905804 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8e6167d2-617a-42a4-985e-9717ff9df2b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b1f190>]}
+[0m22:09:15.906161 [info ] [Thread-1 (]: 5 of 5 OK created sql table model public.orders_detail ......................... [[32mSELECT 2[0m in 0.03s]
+[0m22:09:15.906480 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.orders_detail
+[0m22:09:15.907191 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.907398 [debug] [MainThread]: On master: BEGIN
+[0m22:09:15.907544 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:09:15.915065 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:15.915371 [debug] [MainThread]: On master: COMMIT
+[0m22:09:15.915541 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:15.915690 [debug] [MainThread]: On master: COMMIT
+[0m22:09:15.916268 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:09:15.916534 [debug] [MainThread]: On master: Close
+[0m22:09:15.916812 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:15.916962 [debug] [MainThread]: Connection 'model.dbt_dskola_project.orders_detail' was properly closed.
+[0m22:09:15.917173 [info ] [MainThread]: 
+[0m22:09:15.917358 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m22:09:15.918007 [debug] [MainThread]: Command end result
+[0m22:09:15.937191 [info ] [MainThread]: 
+[0m22:09:15.937532 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:09:15.937707 [info ] [MainThread]: 
+[0m22:09:15.937880 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m22:09:15.939849 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3176255, "process_user_time": 1.553331, "process_kernel_time": 0.176372, "process_mem_max_rss": "117686272", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:09:15.940278 [debug] [MainThread]: Command `dbt run` succeeded at 22:09:15.940226 after 1.32 seconds
+[0m22:09:15.940546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a4be10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a4be90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1033f7e10>]}
+[0m22:09:15.940825 [debug] [MainThread]: Flushing usage events
+[0m22:09:21.747871 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m22:09:27.242321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106139250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619f5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619fd10>]}
+
+
+============================== 22:09:27.245126 | 59e026da-5b41-45e0-9b06-6642098e1b5e ==============================
+[0m22:09:27.245126 [info ] [MainThread]: Running with dbt=1.8.2
+[0m22:09:27.245451 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': './', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'dbt_dskola_project/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate --profiles-dir ./ --project-dir dbt_dskola_project', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:09:27.281220 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:09:27.281636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061b6810>]}
+[0m22:09:27.281895 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:09:27.282091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106281790>]}
+[0m22:09:27.333588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106675f10>]}
+[0m22:09:27.357972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104482190>]}
+[0m22:09:27.358601 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m22:09:27.367836 [debug] [MainThread]: checksum: f0a141b9de567cb7f131613ba2682f40b3a1c6a157f81c6e5435862eff68f109, vars: {}, profile: , target: , version: 1.8.2
+[0m22:09:27.426138 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:09:27.426438 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:09:27.429342 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- seeds.dbt_dskola_project
+- snapshots.dbt_dskola_project
+[0m22:09:27.444826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066c3a50>]}
+[0m22:09:27.458271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10670e710>]}
+[0m22:09:27.458627 [info ] [MainThread]: Found 5 models, 4 sources, 413 macros
+[0m22:09:27.458815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b6d550>]}
+[0m22:09:27.459954 [info ] [MainThread]: 
+[0m22:09:27.460268 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:09:27.462252 [debug] [ThreadPool]: Acquiring new postgres connection 'list_db_dskola_public'
+[0m22:09:27.494118 [debug] [ThreadPool]: Using postgres connection "list_db_dskola_public"
+[0m22:09:27.494407 [debug] [ThreadPool]: On list_db_dskola_public: BEGIN
+[0m22:09:27.494565 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:27.522563 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:27.522858 [debug] [ThreadPool]: Using postgres connection "list_db_dskola_public"
+[0m22:09:27.523030 [debug] [ThreadPool]: On list_db_dskola_public: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "list_db_dskola_public"} */
+select
+      'db_dskola' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'db_dskola' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'db_dskola' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m22:09:27.531163 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m22:09:27.532050 [debug] [ThreadPool]: On list_db_dskola_public: ROLLBACK
+[0m22:09:27.532600 [debug] [ThreadPool]: On list_db_dskola_public: Close
+[0m22:09:27.535812 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:27.536022 [debug] [MainThread]: On master: BEGIN
+[0m22:09:27.536176 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:09:27.543762 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:27.544032 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:27.544253 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:09:27.549931 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m22:09:27.550697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59e026da-5b41-45e0-9b06-6642098e1b5e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10670c850>]}
+[0m22:09:27.550950 [debug] [MainThread]: On master: ROLLBACK
+[0m22:09:27.551392 [debug] [MainThread]: On master: Close
+[0m22:09:27.551668 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:09:27.551847 [info ] [MainThread]: 
+[0m22:09:27.553128 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_customers
+[0m22:09:27.553398 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_db_dskola_public, now model.dbt_dskola_project.raw_customers)
+[0m22:09:27.553623 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_customers
+[0m22:09:27.557987 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_customers"
+[0m22:09:27.558578 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_customers
+[0m22:09:27.559064 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_customers
+[0m22:09:27.559278 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_orders
+[0m22:09:27.559520 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_customers, now model.dbt_dskola_project.raw_orders)
+[0m22:09:27.559693 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_orders
+[0m22:09:27.560984 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_orders"
+[0m22:09:27.561443 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_orders
+[0m22:09:27.561753 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_orders
+[0m22:09:27.564182 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_payments
+[0m22:09:27.564454 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_orders, now model.dbt_dskola_project.raw_payments)
+[0m22:09:27.564640 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_payments
+[0m22:09:27.566844 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_payments"
+[0m22:09:27.568087 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_payments
+[0m22:09:27.568550 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_payments
+[0m22:09:27.568788 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.raw_products
+[0m22:09:27.569074 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_payments, now model.dbt_dskola_project.raw_products)
+[0m22:09:27.569321 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.raw_products
+[0m22:09:27.571640 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.raw_products"
+[0m22:09:27.572489 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.raw_products
+[0m22:09:27.572882 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.raw_products
+[0m22:09:27.573307 [debug] [Thread-1 (]: Began running node model.dbt_dskola_project.orders_detail
+[0m22:09:27.573555 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dskola_project.raw_products, now model.dbt_dskola_project.orders_detail)
+[0m22:09:27.573745 [debug] [Thread-1 (]: Began compiling node model.dbt_dskola_project.orders_detail
+[0m22:09:27.576124 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dskola_project.orders_detail"
+[0m22:09:27.576756 [debug] [Thread-1 (]: Began executing node model.dbt_dskola_project.orders_detail
+[0m22:09:27.577155 [debug] [Thread-1 (]: Finished running node model.dbt_dskola_project.orders_detail
+[0m22:09:27.577752 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:27.577902 [debug] [MainThread]: Connection 'model.dbt_dskola_project.orders_detail' was properly closed.
+[0m22:09:27.578399 [debug] [MainThread]: Command end result
+[0m22:09:27.618007 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:09:27.618255 [info ] [MainThread]: Building catalog
+[0m22:09:27.622784 [debug] [ThreadPool]: Acquiring new postgres connection 'db_dskola.information_schema'
+[0m22:09:27.626678 [debug] [ThreadPool]: Using postgres connection "db_dskola.information_schema"
+[0m22:09:27.626872 [debug] [ThreadPool]: On db_dskola.information_schema: BEGIN
+[0m22:09:27.627016 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:27.641505 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:09:27.641796 [debug] [ThreadPool]: Using postgres connection "db_dskola.information_schema"
+[0m22:09:27.642011 [debug] [ThreadPool]: On db_dskola.information_schema: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "dbt_dskola_project", "target_name": "dev", "connection_name": "db_dskola.information_schema"} */
+
+    
+    
+
+    select
+        'db_dskola' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('payments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('orders')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('products')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('raw_products')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('orders_detail')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('raw_payments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('customers')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('raw_orders')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('raw_customers')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:09:27.657507 [debug] [ThreadPool]: SQL status: SELECT 44 in 0.0 seconds
+[0m22:09:27.660888 [debug] [ThreadPool]: On db_dskola.information_schema: ROLLBACK
+[0m22:09:27.661685 [debug] [ThreadPool]: On db_dskola.information_schema: Close
+[0m22:09:27.678809 [info ] [MainThread]: Catalog written to /Users/moladin/Library/Mobile Documents/com~apple~CloudDocs/code/dbt/learn_dbt-main/dbt_dskola_project/target/catalog.json
+[0m22:09:27.679997 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 0.47002658, "process_user_time": 0.90898, "process_kernel_time": 0.135269, "process_mem_max_rss": "120061952", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:09:27.680374 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:09:27.680325 after 0.47 seconds
+[0m22:09:27.680563 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:09:27.680714 [debug] [MainThread]: Connection 'db_dskola.information_schema' was properly closed.
+[0m22:09:27.680894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061a7e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061a7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c016d0>]}
+[0m22:09:27.681107 [debug] [MainThread]: Flushing usage events
+[0m22:10:26.262819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104991690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049fae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049fb690>]}
+
+
+============================== 22:10:26.266929 | 5ece01cd-66ea-4c22-9f17-88c156a68c45 ==============================
+[0m22:10:26.266929 [info ] [MainThread]: Running with dbt=1.8.2
+[0m22:10:26.267323 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': './', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'dbt_dskola_project/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs serve --profiles-dir ./ --project-dir dbt_dskola_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:10:26.312064 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:10:26.312403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5ece01cd-66ea-4c22-9f17-88c156a68c45', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a32610>]}
+[0m22:10:26.312667 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m22:10:26.312895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5ece01cd-66ea-4c22-9f17-88c156a68c45', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e7e950>]}
+[0m22:10:26.367682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ece01cd-66ea-4c22-9f17-88c156a68c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104993390>]}
+[0m22:10:26.403864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5ece01cd-66ea-4c22-9f17-88c156a68c45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102cd6610>]}
+[0m22:28:18.470533 [error] [MainThread]: Encountered an error:
+
+[0m22:28:18.484053 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/cli/main.py", line 303, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/moladin/code/venv_ds/lib/python3.11/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/opt/anaconda3/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m22:28:18.502460 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 1071.9115, "process_user_time": 0.814639, "process_kernel_time": 0.195975, "process_mem_max_rss": "101695488", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:28:18.503924 [debug] [MainThread]: Command `dbt docs serve` failed at 22:28:18.503744 after 1071.91 seconds
+[0m22:28:18.504961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104992690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049fb9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049fad90>]}
+[0m22:28:18.506316 [debug] [MainThread]: Flushing usage events

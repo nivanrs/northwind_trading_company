@@ -1,7 +1,7 @@
 FROM postgres:latest
 
-ENV POSTGRES_USER=postgres
-ENV POSTGRES_PASSWORD=12345678
+ENV POSTGRES_USER=nivanram
+ENV POSTGRES_PASSWORD=nivanram
 ENV POSTGRES_DB=db_project_northwind
 
 # if you want to check the result on local

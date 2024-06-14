@@ -9,6 +9,16 @@
       "database": "db_dskola",
       "username": "postgres",
       "password": "12345678"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "username": "postgres",
+      "password": "12345678",
+      "database": "db_project_northwind",
+      "name": "project_northwind"
     }
   ]
 }

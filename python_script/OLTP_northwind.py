@@ -9,14 +9,21 @@ engine = create_engine(db_url)
 # Directory containing CSV files
 csv_dir = r'../northwind_CSV'
 
-# List all CSV files in the directory
-csv_files = [f for f in os.listdir(csv_dir) if f.endswith('.csv')]
+# List of CSV files and corresponding table names
+csv_files = {
+    'categories.csv': 'categories',
+    'employees.csv': 'employees',
+    'suppliers.csv': 'suppliers',
+    'products.csv': 'products',
+    'orders.csv': 'orders',
+    'order_details.csv': 'order_details'
+}
 
 # Load each CSV file into PostgreSQL
-for file in csv_files:
+for file, table in csv_files.items():
     file_path = os.path.join(csv_dir, file)
-    table_name = file.replace('.csv', '')
     df = pd.read_csv(file_path)
-    df.to_sql(table_name, engine, if_exists='replace', index=False)
+    df.to_sql(table, engine, if_exists='fail', index=False)
 
 print("All CSV files have been loaded into PostgreSQL.")
+
